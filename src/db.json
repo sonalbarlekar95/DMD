@@ -1,0 +1,11 @@
+[
+    {
+        "id": "1",
+        "firstName": "Sonal",
+        "lastName": "Barlekar",
+        "email":"ss@gmail.com",
+        "contact":"9988776655",
+        "address":"123 main St",
+        "gender":"female"
+    }
+]

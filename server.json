@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "firstName": "sonki",
+      "lastName": "Barlekar",
+      "userName": "useename",
+      "address": "iwueyiuwyein ",
+      "company": "iwuyiuwehirhjk",
+      "contact": "987456321",
+      "job": "kjshdkj",
+      "email": "sssssss",
+      "summary": "",
+      "id": 2
+    },
+    {
+      "firstName": "sdfsdf",
+      "lastName": "hkn",
+      "userName": "utytututut",
+      "address": "Dedicated, positive, jolly, quick learner",
+      "company": "hkjhkjh",
+      "contact": "98745632100",
+      "job": "uytuytuytut",
+      "email": "mm@mm.com",
+      "summary": "Dedicated, positive, jolly, quick learner",
+      "id": 3
+    },
+    {
+      "firstName": "new ",
+      "lastName": "user",
+      "userName": "newUser",
+      "address": "312 Miiuhdsifusd",
+      "company": "Zenmonics pvt ltd",
+      "contact": "9874563210",
+      "job": "Software Engineer",
+      "email": "new@user.com",
+      "summary": "shdjd jbcz euyiuw mnBxau uhdiaud",
+      "id": 4
+    }
+  ]
+}

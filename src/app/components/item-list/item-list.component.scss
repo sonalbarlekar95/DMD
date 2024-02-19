@@ -1,0 +1,88 @@
+:host ::ng-deep .p-button {
+    margin-right: .5rem;
+}
+
+:host ::ng-deep .p-buttonset {
+    .p-button {
+        margin-right: 0;
+    }
+}
+
+.bg-red {
+    background-color: red;
+}
+
+::ng-deep .user-detail span.p-button-icon.p-button-icon-left.pi.pi-plus {
+    padding: 5px !important;
+}
+
+.add-button-section {
+    display: flex;
+    gap: 80px;
+    width: 100% !important;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+::ng-deep .action-button-section span.p-button-icon.p-button-icon-left.pi.pi-pencil, .action-button-section span.p-button-icon.p-button-icon-left.pi.pi-trash {
+    margin-right: 5px !important;
+}
+
+
+.container {
+    padding: 10px;
+}
+
+.control {
+    width: 100%;
+    border: 1px solid #628292 !important;
+    border-radius: 4px;
+    margin: 5PX;
+    padding: 7PX;
+    //border-color: #628292 !important;
+    //border-bottom: 2px solid #628292;
+}
+
+.input-error-container {
+    position: relative;
+
+    .error-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 22px;
+        right: -5px;
+        font-size: 1.4rem;
+        transform: translate(-50%, -50%);
+        color: red;
+    }
+}
+
+.d-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+.right-align{
+    display: flex;
+    justify-content: flex-end;
+    // align-items: end;
+    // text-align: end;
+}
+
+.m-5 {
+    margin: 5px;
+}
+
+@media only screen and (max-width: 640px) {
+    .res-w100-customer {
+        width: 100%;
+    }
+    .res-w50-customer {
+        width: 50%;
+    }
+}
+.gap-20 {
+    gap: 20px;
+}
