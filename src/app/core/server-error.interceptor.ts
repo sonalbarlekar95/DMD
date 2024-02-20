@@ -15,9 +15,7 @@ import { HandleErrorService } from "../service/handle-error.service";
   providedIn: 'root'
 })
 export class ServerErrorsInterceptor implements HttpInterceptor {
-  constructor(
-    private error: HandleErrorService,
-  ) {}
+  constructor(private error: HandleErrorService) {}
 
   // intercept function
   public intercept(
