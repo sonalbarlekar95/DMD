@@ -1,0 +1,93 @@
+<section class="bg-white dark:bg-gray-900">
+    <!-- <div class="flex flex-col items-center m-5"> -->
+<div class="flex flex-col items-center min-h-screen w-screen p-50">
+    <!-- <div class="container d-flex">
+        <h2>Hello this is {{selectedItem?.name}}</h2>
+        <button *ngIf="!editEnable" type="button right-align" class="p-button" pButton
+            (click)="getMoreDetails();editEnable=true;">Edit </button>
+    </div> -->
+    <div class="add-button-section max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+        <h3 class="m-4 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">{{(selectedItem && selectedItem.id) ? "Edit details of " + selectedItem.firstName + " " + selectedItem.lastName : "Add New User"}}</h3>
+        <!-- <button class="text-white bg-purple-600 flex flex-end rounded-lg p-8">Add New User</button> -->
+    </div>
+    <form autocomplete="off" (submit)="updateUser(selectedItem?.id);" [formGroup]="editUserForm" autocomplete="off"
+        class="bg-base-white/60 max-w-lg flex flex-col items-center  gap-8 rounded-none lg:rounded-xl p-6 my-0 lg:my-12 shadow-none lg:shadow-lg backdrop-blur-md text-auxiliary-text width-full">
+    <p-card header="Login" [style]="{ width: '360px' }">
+        <div class="field">
+            <label for="name"> First Name*</label>
+                <input class="w-full" formControlName="firstName" id="firstName" autocomplete="new-password" pInputText
+                    size="3" maxlength="50" type="text" />
+                    <small *ngIf="true" class="block p-error">
+                        <div *ngIf="validateChk.firstName.invalid && (validateChk.firstName.dirty || validateChk.firstName.touched)">First Name is required.</div>
+                    </small>
+        </div>
+        <div class="field">
+            <label for="name"> Last Name*</label>
+                <input class="w-full" formControlName="lastName" id="lastName" autocomplete="new-password" pInputText
+                    size="3" maxlength="50" type="text" />
+                    <small *ngIf="true" class="block p-error">
+                        <div *ngIf="validateChk.lastName.invalid && (validateChk.lastName.dirty || validateChk.lastName.touched)">Last Name is required.</div>
+                    </small>
+        </div>
+        <div class="field">
+            <label for="name"> User Name*</label>
+                <input class="w-full" formControlName="userName" id="userName" autocomplete="new-password" pInputText
+                    size="3" maxlength="50" type="text" />
+                    <small *ngIf="true" class="block p-error">
+                        <div *ngIf="validateChk.userName.invalid && (validateChk.userName.dirty || validateChk.userName.touched)">User Name is required.</div>
+                    </small>
+        </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="text" pInputText formControlName="email" class="w-full" name="email"
+                placeholder="Type your email" />
+                <small *ngIf="true" class="block p-error">
+                    <div *ngIf="validateChk.email.invalid && (validateChk.email.dirty || validateChk.email.touched) &&validateChk.email.errors.required">Email is required.</div>
+                    <div *ngIf="validateChk.email.invalid && (validateChk.email.dirty || validateChk.email.touched) && validateChk.email.errors.email">Email is invalid.</div>
+                </small>
+        </div>
+        <div class="field">
+            <label for="phone">Phone</label>
+            <input type="text" pInputText formControlName="contact" class="w-full" name="contact"
+                placeholder="Type your phone" />
+                <small *ngIf="validateChk.contact.errors" class="block p-error">
+                    <div *ngIf="validateChk.contact.invalid && (validateChk.contact.dirty || validateChk.contact.touched)">Phone is required.</div>
+                </small>
+        </div>
+        <div class="field">
+            <label for="phone">Company</label>
+            <input type="text" pInputText formControlName="company" class="w-full" name="company"
+                placeholder="Type your company" />
+                <small *ngIf="validateChk.company.errors" class="block p-error">
+                    <div *ngIf="validateChk.company.invalid && (validateChk.company.dirty || validateChk.company.touched)">Company is required.</div>
+                </small>
+        </div>
+        <div class="field">
+            <label for="phone">Role</label>
+            <input type="text" pInputText formControlName="job" class="w-full" name="job"
+                placeholder="Type your phone" />
+                <small *ngIf="true" class="block p-error">
+                    <div *ngIf="validateChk.job.invalid && (validateChk.job.dirty || validateChk.job.touched)">Role is required.</div>
+                </small>
+        </div>
+        <div class="field">
+            <label for="address">Address</label>
+            <!-- <input type="address" pInputText formControlName="address" class="w-full" name="address"
+                placeholder="Type your address" /> -->
+                <textarea type="address" pInputText formControlName="address" class="w-full" name="address"
+                placeholder="Type your address"></textarea>
+        </div>
+        <div class="field">
+            <label for="summary">Summary</label>
+            <textarea type="summary" pInputText formControlName="summary" class="w-full" name="summary"
+                placeholder="Type your summary"></textarea>
+        </div>
+        <div class="flex justify-end">
+        <button pButton type="submit" label="{{selectedItem && selectedItem.id?'Update User':'Add User'}}" class="m-5 text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-red-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-red-900" ></button>
+    </div>
+    </p-card>
+    </form>
+    </div>
+</section>
+
+<!-- <p-toast position="top-center"></p-toast> -->
